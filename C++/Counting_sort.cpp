@@ -19,18 +19,18 @@ void countSort(char arr[])
 	memset(count, 0, sizeof(count));
 
 	// Store count of each character
-	for (i = 0; arr[i]; ++i)
-		++count[arr[i]];
+	for (i = 0; arr[i]; i++)
+		count[arr[i]]++;
 
 	// Change count[i] so that count[i] now contains actual
 	// position of this character in output array
-	for (i = 1; i <= RANGE; ++i)
+	for (i = 1; i <= RANGE; i++)
 		count[i] += count[i - 1];
 
 	// Build the output character array
-	for (i = 0; arr[i]; ++i) {
+	for (i = 0; arr[i]; i++) {
 		output[count[arr[i]] - 1] = arr[i];
-		--count[arr[i]];
+		count[arr[i]]--;
 	}
 
 	/*
@@ -46,13 +46,19 @@ void countSort(char arr[])
 
 	// Copy the output array to arr, so that arr now
 	// contains sorted characters
-	for (i = 0; arr[i]; ++i)
+	for (i = 0; arr[i]; i++)
 		arr[i] = output[i];
 }
 
 // Driver code
 int main()
 {
+  
+  ios_base::sync_with_stdio(0);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  
+  
 	char arr[] = "countingsortincpp";
 
 	countSort(arr);
