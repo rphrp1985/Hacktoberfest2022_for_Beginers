@@ -13,7 +13,7 @@ using namespace std;
         return reverse; }
 int main(){
   int x=2486;
-  cout<<"Reverse no : "<<reverse(x);
+    printf("Reverse no : %d",reverse(x));
   return 0; }
 
     
