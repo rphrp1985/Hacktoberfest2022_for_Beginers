@@ -1,5 +1,4 @@
-// Author: ADARSH
-// Date Modified: 01/10/2022
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,8 +10,9 @@ bool isPowerOf2(int n) {
 int main(int argc, char const *argv[])
 {
     int n;
-    cout << "Enter a number: ";
-    cin >> n;
-    cout << ((isPowerOf2(n)) ? "It's a power of 2." : "It's not a power of 2."); 
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    isPowerOf2(n) ?  printf("It's a power of 2.") : printf("It's not a power of 2."); 
+    
     return 0;
 }
